@@ -15,14 +15,14 @@ require "pry"
 # end
 
 def reformat_languages(languages)
-  new_languages = {}
+  new_hash = {}
 
-  languages.each do |type, language|
+  languages.each do |oo_f, language|
     language.each do |name, info|
-      new_languages[name] ||= info
-      new_languages[name][:style] ||= []
-      new_languages[name][:style] << type
+      new_hash[name] ||= info
+      new_hash[name][:style] ||= []
+      new_hash[name][:style] << oo_f
     end
   end
-  new_languages
+  new_hash
 end
